@@ -1,0 +1,232 @@
+
+<a id="TMP_171f"></a>
+
+# What's New in MATLAB: 2025a
+<!-- Begin Toc -->
+
+## Table of Contents
+&emsp;[Explore & Design](#TMP_7317)
+ 
+&emsp;&emsp;[User Interface](#TMP_4e34)
+ 
+&emsp;&emsp;[Improved Live Editor and Live Script](#TMP_4934)
+ 
+&emsp;&emsp;[MATLAB Copilot](#TMP_830d)
+ 
+&emsp;[Share & Deploy](#TMP_651c)
+ 
+&emsp;&emsp;[App Designer (+Dark Mode)](#TMP_30e5)
+ 
+&emsp;&emsp;[Source Control Integration](#TMP_5568)
+ 
+<!-- End Toc -->
+<a id="TMP_745e"></a>
+```matlab
+airq = readtable('madrid_2018.csv')
+```
+
+
+| |date|BEN|CH4|CO|EBE|NMHC|NO|NO_2|NOx|O_3|PM10|PM25|SO_2|TCH|TOL|station|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|1|2018-03-01 01:00:00|NaN|NaN|0.3000|NaN|NaN|1|29|31|NaN|NaN|NaN|2|NaN|NaN|28079004|
+|2|2018-03-01 01:00:00|0.5000|1.3900|0.3000|0.2000|0.0200|6|40|49|52|5|4|3|1.4100|0.8000|28079008|
+|3|2018-03-01 01:00:00|0.4000|NaN|NaN|0.2000|NaN|4|41|47|NaN|NaN|NaN|NaN|NaN|1.1000|28079011|
+|4|2018-03-01 01:00:00|NaN|NaN|0.3000|NaN|NaN|1|35|37|54|NaN|NaN|NaN|NaN|NaN|28079016|
+|5|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|27|29|49|NaN|NaN|3|NaN|NaN|28079017|
+|6|2018-03-01 01:00:00|0.3000|NaN|0.3000|0.2000|NaN|1|27|29|57|8|NaN|6|NaN|1|28079018|
+|7|2018-03-01 01:00:00|0.4000|1.1100|0.2000|0.1000|0.0600|1|25|27|55|5|4|4|1.1600|1.4000|28079024|
+|8|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|37|39|54|NaN|NaN|NaN|NaN|NaN|28079027|
+|9|2018-03-01 01:00:00|NaN|NaN|0.5000|NaN|NaN|3|43|47|29|NaN|NaN|5|NaN|NaN|28079035|
+|10|2018-03-01 01:00:00|NaN|NaN|0.2000|NaN|NaN|2|26|29|NaN|4|NaN|6|NaN|NaN|28079036|
+|11|2018-03-01 01:00:00|0.4000|NaN|NaN|0.3000|NaN|2|30|34|NaN|2|2|3|NaN|0.9000|28079038|
+|12|2018-03-01 01:00:00|NaN|NaN|0.3000|NaN|NaN|1|28|29|59|NaN|NaN|NaN|NaN|NaN|28079039|
+|13|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|31|33|NaN|4|NaN|5|NaN|NaN|28079040|
+|14|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|30|32|NaN|2|2|NaN|NaN|NaN|28079047|
+|15|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|40|41|NaN|8|7|NaN|NaN|NaN|28079048|
+|16|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|26|27|26|NaN|NaN|NaN|NaN|NaN|28079049|
+|17|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|11|41|58|NaN|6|5|NaN|NaN|NaN|28079050|
+|18|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|15|17|66|NaN|NaN|NaN|NaN|NaN|28079054|
+|19|2018-03-01 01:00:00|0.3000|1.3700|NaN|0.3000|0.0300|1|49|51|NaN|5|NaN|NaN|1.4100|1.1000|28079055|
+|20|2018-03-01 01:00:00|NaN|NaN|0.2000|NaN|NaN|9|57|71|37|12|9|NaN|NaN|NaN|28079056|
+|21|2018-03-01 01:00:00|NaN|NaN|0.3000|NaN|NaN|1|29|31|NaN|3|NaN|11|NaN|NaN|28079057|
+|22|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|23|25|41|NaN|NaN|NaN|NaN|NaN|28079058|
+|23|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|29|31|54|NaN|NaN|NaN|NaN|NaN|28079059|
+|24|2018-03-01 01:00:00|NaN|NaN|NaN|NaN|NaN|1|23|25|67|1|NaN|NaN|NaN|NaN|28079060|
+|25|2018-03-01 02:00:00|NaN|NaN|0.3000|NaN|NaN|1|24|25|NaN|NaN|NaN|2|NaN|NaN|28079004|
+|26|2018-03-01 02:00:00|0.4000|1.4200|0.2000|0.1000|0.0100|4|26|32|64|4|4|3|1.4400|0.7000|28079008|
+|27|2018-03-01 02:00:00|0.2000|NaN|NaN|0.1000|NaN|3|24|29|NaN|NaN|NaN|NaN|NaN|0.5000|28079011|
+|28|2018-03-01 02:00:00|NaN|NaN|0.2000|NaN|NaN|1|17|19|67|NaN|NaN|NaN|NaN|NaN|28079016|
+|29|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|15|16|57|NaN|NaN|3|NaN|NaN|28079017|
+|30|2018-03-01 02:00:00|0.2000|NaN|0.2000|0.1000|NaN|4|21|26|62|6|NaN|6|NaN|0.8000|28079018|
+|31|2018-03-01 02:00:00|0.3000|1.1000|0.2000|0.1000|0.0500|1|12|13|69|5|4|4|1.1400|0.8000|28079024|
+|32|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|30|32|54|NaN|NaN|NaN|NaN|NaN|28079027|
+|33|2018-03-01 02:00:00|NaN|NaN|0.5000|NaN|NaN|3|35|39|30|NaN|NaN|5|NaN|NaN|28079035|
+|34|2018-03-01 02:00:00|NaN|NaN|0.2000|NaN|NaN|1|12|13|NaN|4|NaN|6|NaN|NaN|28079036|
+|35|2018-03-01 02:00:00|0.4000|NaN|NaN|0.3000|NaN|1|24|26|NaN|4|3|3|NaN|1|28079038|
+|36|2018-03-01 02:00:00|NaN|NaN|0.2000|NaN|NaN|1|22|23|65|NaN|NaN|NaN|NaN|NaN|28079039|
+|37|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|12|14|NaN|3|NaN|5|NaN|NaN|28079040|
+|38|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|22|23|NaN|4|3|NaN|NaN|NaN|28079047|
+|39|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|26|28|NaN|4|3|NaN|NaN|NaN|28079048|
+|40|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|16|18|34|NaN|NaN|NaN|NaN|NaN|28079049|
+|41|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|8|26|38|NaN|7|7|NaN|NaN|NaN|28079050|
+|42|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|11|12|64|NaN|NaN|NaN|NaN|NaN|28079054|
+|43|2018-03-01 02:00:00|0.3000|1.4400|NaN|0.3000|0.0300|1|26|28|NaN|7|NaN|NaN|1.4700|1.1000|28079055|
+|44|2018-03-01 02:00:00|NaN|NaN|0.2000|NaN|NaN|5|29|37|57|8|6|NaN|NaN|NaN|28079056|
+|45|2018-03-01 02:00:00|NaN|NaN|0.3000|NaN|NaN|1|20|22|NaN|3|NaN|10|NaN|NaN|28079057|
+|46|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|20|22|47|NaN|NaN|NaN|NaN|NaN|28079058|
+|47|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|13|15|69|NaN|NaN|NaN|NaN|NaN|28079059|
+|48|2018-03-01 02:00:00|NaN|NaN|NaN|NaN|NaN|1|21|22|69|4|NaN|NaN|NaN|NaN|28079060|
+|49|2018-03-01 03:00:00|NaN|NaN|0.3000|NaN|NaN|1|19|21|NaN|NaN|NaN|1|NaN|NaN|28079004|
+|50|2018-03-01 03:00:00|0.3000|1.4100|0.2000|0.1000|0.0100|3|16|20|68|3|2|3|1.4200|0.4000|28079008|
+|51|2018-03-01 03:00:00|0.2000|NaN|NaN|0.1000|NaN|1|11|12|NaN|NaN|NaN|NaN|NaN|0.3000|28079011|
+|52|2018-03-01 03:00:00|NaN|NaN|0.2000|NaN|NaN|1|9|10|72|NaN|NaN|NaN|NaN|NaN|28079016|
+|53|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|12|13|55|NaN|NaN|3|NaN|NaN|28079017|
+|54|2018-03-01 03:00:00|0.2000|NaN|0.2000|0.1000|NaN|1|12|14|65|9|NaN|5|NaN|0.5000|28079018|
+|55|2018-03-01 03:00:00|0.3000|1.1100|0.1000|0.1000|0.0500|1|12|13|65|6|5|4|1.1600|1|28079024|
+|56|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|14|15|64|NaN|NaN|NaN|NaN|NaN|28079027|
+|57|2018-03-01 03:00:00|NaN|NaN|0.4000|NaN|NaN|3|27|31|33|NaN|NaN|6|NaN|NaN|28079035|
+|58|2018-03-01 03:00:00|NaN|NaN|0.2000|NaN|NaN|1|6|7|NaN|4|NaN|6|NaN|NaN|28079036|
+|59|2018-03-01 03:00:00|0.3000|NaN|NaN|0.3000|NaN|1|15|16|NaN|6|5|3|NaN|0.8000|28079038|
+|60|2018-03-01 03:00:00|NaN|NaN|0.2000|NaN|NaN|1|11|13|74|NaN|NaN|NaN|NaN|NaN|28079039|
+|61|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|9|10|NaN|4|NaN|5|NaN|NaN|28079040|
+|62|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|15|17|NaN|5|4|NaN|NaN|NaN|28079047|
+|63|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|14|16|NaN|1|1|NaN|NaN|NaN|28079048|
+|64|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|13|15|41|NaN|NaN|NaN|NaN|NaN|28079049|
+|65|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|6|12|22|NaN|5|3|NaN|NaN|NaN|28079050|
+|66|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|9|11|62|NaN|NaN|NaN|NaN|NaN|28079054|
+|67|2018-03-01 03:00:00|0.3000|1.2100|NaN|0.2000|0.0400|1|11|12|NaN|4|NaN|NaN|1.2400|0.7000|28079055|
+|68|2018-03-01 03:00:00|NaN|NaN|0.2000|NaN|NaN|3|15|19|66|7|5|NaN|NaN|NaN|28079056|
+|69|2018-03-01 03:00:00|NaN|NaN|0.2000|NaN|NaN|1|7|8|NaN|2|NaN|10|NaN|NaN|28079057|
+|70|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|13|14|61|NaN|NaN|NaN|NaN|NaN|28079058|
+|71|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|7|8|68|NaN|NaN|NaN|NaN|NaN|28079059|
+|72|2018-03-01 03:00:00|NaN|NaN|NaN|NaN|NaN|1|13|14|74|1|NaN|NaN|NaN|NaN|28079060|
+|73|2018-03-01 04:00:00|NaN|NaN|0.3000|NaN|NaN|1|14|15|NaN|NaN|NaN|1|NaN|NaN|28079004|
+|74|2018-03-01 04:00:00|0.3000|1.4000|0.2000|0.1000|0.0100|3|13|17|71|7|6|3|1.4100|0.3000|28079008|
+|75|2018-03-01 04:00:00|0.2000|NaN|NaN|0.1000|NaN|1|9|11|NaN|NaN|NaN|NaN|NaN|0.2000|28079011|
+|76|2018-03-01 04:00:00|NaN|NaN|0.2000|NaN|NaN|1|7|9|72|NaN|NaN|NaN|NaN|NaN|28079016|
+|77|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|11|12|54|NaN|NaN|3|NaN|NaN|28079017|
+|78|2018-03-01 04:00:00|0.2000|NaN|0.2000|0.4000|NaN|1|11|12|62|2|NaN|5|NaN|0.6000|28079018|
+|79|2018-03-01 04:00:00|0.4000|1.1600|0.1000|0.2000|0.0500|1|8|10|64|4|3|4|1.2100|1.1000|28079024|
+|80|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|7|8|71|NaN|NaN|NaN|NaN|NaN|28079027|
+|81|2018-03-01 04:00:00|NaN|NaN|0.4000|NaN|NaN|3|26|32|32|NaN|NaN|5|NaN|NaN|28079035|
+|82|2018-03-01 04:00:00|NaN|NaN|0.2000|NaN|NaN|1|7|8|NaN|3|NaN|6|NaN|NaN|28079036|
+|83|2018-03-01 04:00:00|0.2000|NaN|NaN|0.2000|NaN|1|11|13|NaN|2|2|3|NaN|0.4000|28079038|
+|84|2018-03-01 04:00:00|NaN|NaN|0.2000|NaN|NaN|1|8|10|74|NaN|NaN|NaN|NaN|NaN|28079039|
+|85|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|10|11|NaN|3|NaN|5|NaN|NaN|28079040|
+|86|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|11|12|NaN|3|2|NaN|NaN|NaN|28079047|
+|87|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|4|13|19|NaN|3|3|NaN|NaN|NaN|28079048|
+|88|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|3|45|49|47|NaN|NaN|NaN|NaN|NaN|28079049|
+|89|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|7|9|20|NaN|4|3|NaN|NaN|NaN|28079050|
+|90|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|11|12|62|NaN|NaN|NaN|NaN|NaN|28079054|
+|91|2018-03-01 04:00:00|0.2000|1.2000|NaN|0.1000|0.0300|1|7|8|NaN|4|NaN|NaN|1.2300|0.4000|28079055|
+|92|2018-03-01 04:00:00|NaN|NaN|0.2000|NaN|NaN|2|14|18|64|2|1|NaN|NaN|NaN|28079056|
+|93|2018-03-01 04:00:00|NaN|NaN|0.2000|NaN|NaN|1|5|7|NaN|3|NaN|10|NaN|NaN|28079057|
+|94|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|8|10|64|NaN|NaN|NaN|NaN|NaN|28079058|
+|95|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|11|13|65|NaN|NaN|NaN|NaN|NaN|28079059|
+|96|2018-03-01 04:00:00|NaN|NaN|NaN|NaN|NaN|1|10|11|75|4|NaN|NaN|NaN|NaN|28079060|
+|97|2018-03-01 05:00:00|NaN|NaN|0.3000|NaN|NaN|1|18|19|NaN|NaN|NaN|1|NaN|NaN|28079004|
+|98|2018-03-01 05:00:00|0.3000|1.6000|0.2000|0.1000|0.0100|3|16|20|65|9|9|3|1.6100|0.4000|28079008|
+|99|2018-03-01 05:00:00|0.1000|NaN|NaN|0.1000|NaN|1|11|13|NaN|NaN|NaN|NaN|NaN|0.3000|28079011|
+|100|2018-03-01 05:00:00|NaN|NaN|0.2000|NaN|NaN|1|9|11|70|NaN|NaN|NaN|NaN|NaN|28079016|
+
+
+```matlab
+airq = sortrows(airq,"date","ascend");
+```
+<a id="TMP_7317"></a>
+
+# Explore & Design
+<a id="TMP_4e34"></a>
+
+## User Interface
+```matlab
+DarkMode = true;
+NewPanels = true; % 
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debugger, Source Control, Project, Save Current Layout
+
+```matlab
+VarEditWin = true; % Variable Editor window
+FigureWin = true; % New Figure Window
+```
+<a id="TMP_4934"></a>
+
+## Improved Live Editor and Live Script
+
+![image_0.png](./WhatsNew25a_media/image_0.png)
+
+```matlab
+apptaskw = true;% More apps, tasks, and workflows, 
+
+vids = true;% Embedded videos
+plaintext = true;% Live Scripts as .m - plain text!
+fcnmiddle = true;% Functions in middle of script
+mdgen = true;% Markdown generation
+```
+<a id="TMP_830d"></a>
+
+## MATLAB Copilot
+```matlab
+Copilot = true;
+```
+
+<a id="TMP_651c"></a>
+
+# Share & Deploy
+<a id="TMP_30e5"></a>
+
+## App Designer (+Dark Mode)
+```matlab
+Standalone = false;% Standalone Apps
+AIO = false;% All In One: App, Toolbox, Project
+```
+<a id="TMP_5568"></a>
+
+## Source Control Integration
+```matlab
+GitHub = false; % Direct GitHub integrations
+MLO = false; % Open in MATLAB Online 
+
+```
+
+```matlab
+% Python code input
+pycode = [...
+"import numpy as np",...
+"",...
+"x = 42",...
+"var = np.sqrt(42)",...
+"",...
+"print(var)"...
+];
+
+try
+    [x, var] = pyrun(pycode, ...
+         [ "x" "var" ])
+catch ME7
+    % Clear temporary variables from workspace and from Python
+    clear pycode;
+    rethrow(ME7)
+end
+```
+
+```matlabTextOutput
+Error using > (line 1)
+Python Error: ModuleNotFoundError: No module named 'numpy'
+```
+
+```matlab
+
+% Clear temporary variables from workspace and from Python
+clear pycode;
+```
+
+https://www.mathworks.com/products/matlab\-online/git.html
+
+
+[Example 1](https://www.mathworks.com/matlabcentral/fileexchange/160986-precipitation-variability-analysis-matlab)
+
+
+[Example 2](https://github.com/mathworks/Seismic-HAzard-Parameters-Evaluation-Interface-SHAppE)
+
